@@ -1,0 +1,13 @@
+1) Run 4 models and select either seg/fcn with default zero lam1, lam2
+python build_model_vgg16_seg.py
+python build_model_vgg16_fcn.py
+python build_model_vgg16_fcn_t.py
+python build_model_vgg16_seg_t.py
+
+2) Run 32 models to tune lam1 and lam 2 parameters and select final model
+lam1 = 0.00, 0.01, 0.10, 1.00
+lam2 = 0.00, 0.01, 0.10, 1.00
+python build_model_vgg16_seg.py --lam1 --lam2
+python build_model_vgg16_fcn.py --lam1 --lam2
+python build_model_vgg16_fcn_t.py --lam1 --lam2
+python build_model_vgg16_seg_t.py -lam1 --lam2
